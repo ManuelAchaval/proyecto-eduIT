@@ -1,0 +1,830 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Proyecto integrador</title>
+</head>
+
+<body>
+    <!-- Header de navegacion -->
+    <header>
+
+        <input type="checkbox" class="check-menu" id="check-menu">
+        <label for="check-menu" class="burger-menu">
+            <div class="burger-line"></div>
+        </label>
+        <div class="header-logo">
+            <a href="/index.html"><img src="../assets/imagenes/barco-logo.png" alt="Logo del Header"
+                    class="header-img"></a>
+
+        </div>
+        <nav class="nav-menu">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="/index.html">Home</a></li>
+                <li class="nav-item"><a href="/pages/contact.html">Contacto</a></li>
+                <li class="nav-item"><a href="/pages/about.html">Sobre mí</a></li>
+                <li class="nav-item"><a href="/pages/registro.html">Login</a></li>
+                <li class="nav-item"><a href="/pages/admin-products.html">Admin Panel</a></li>
+                
+            </ul>
+
+        </nav>
+        <!-- Perfil de usuario -->
+        <div class="user-info">
+            <div class="user-cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </div>
+            <div class="user-data">
+                <img src="./assets/imagenes/prof-usu-default.png" alt="" class="user-img">
+                <div class="user-name"> Juan Ciervo</div>
+            </div>
+
+        </div>
+    </header>
+    <!-- Banner con img  -->
+    <section class="main-banner" id="inicio">
+        <div id="elcarrusel" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active banner-img">
+                    <img src="/assets/imagenes/banners/Descubre.jpg" class="d-block  active banner-img "
+                        alt="Descubre lo nuestro">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/imagenes/banners/Lo-que-necesitas.jpg" class="d-block  banner-img" alt="Diorama">
+                </div>
+                <div class="carousel-item">
+                    <img src="/assets/imagenes/banners/un-banner-atat.png" class="d-block  banner-img" alt="AT-AT">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#elcarrusel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#elcarrusel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="banner-info">
+                <h1>CapitándeHobbies</h1>
+                <h3>Tu tienda de modelismo</h3>
+                <p>Te acercamos los mejores productos historicos de modelismo con foco en modelos nacionales!</p>
+            </div>
+        </div>
+    </section>
+    <!-- Contenedor principal -->
+    <main class="main-container alinear-centro">
+
+        <h2>Nuestra tienda </h2>
+        <p>Encontrá los mejores productos, insumos y mucho más para adentrarte en el mundo del modelismo!</p>
+
+        <!-- Contenedor de productos -->
+        <div class="card-container">
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- imagen/imagenes -->
+                        <img src="./assets/imagenes/fragata-hercules.png" alt="Modelo Fragata Hercules"
+                            class="card-img card-img-1">
+                        <img src="./assets/imagenes/fragata-hercules2.png" alt=" Modelo Fragata Libertad"
+                            class="card-img card-img-2">
+                        <div class="actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <a href="/pages/product-detail.html"><i class="fa-regular fa-eye"></i></a>
+
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <!-- Titulo
+                    categoria
+                    precio -->
+                        <div class="card-category">Maquetas</div>
+                        <h3 class="card-title">Maquetas para armar</h3>
+                        <div class="card-average">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4)
+                        </div>
+                        <div class="card-price">
+                            <span class="price"><small>$</small>2800</span>
+                            <span class="normal-price"><small>$</small>4300</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- seleccion de tipo 
+                    cantidad 
+                    agregar al carrito-->
+                        <div>
+                            <div class="card-selection">
+                                <div class="version">
+                                    <label for="version" class="selection-label">Version</label>
+                                    <select name="version" id="Version">
+                                        <option value="E1">Entrega 1</option>
+                                        <option value="E2">Entrega 2</option>
+                                        <option value="E3">Entrega 3</option>
+                                    </select>
+                                </div>
+                                <div class="card-quantity">
+                                    <p class="selection-label">Cantidad</p>
+                                    <div class="quantity-number">
+                                        <button> <i class="fa-solid fa-minus"></i> </button>
+                                        <div>1</div>
+                                        <button> <i class="fa-solid fa-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart">Añadir al carrito <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- imagen/imagenes -->
+                        <img src="./assets/imagenes/fragata-hercules.png" alt="Modelo Fragata Hercules"
+                            class="card-img card-img-1">
+                        <img src="./assets/imagenes/fragata-hercules2.png" alt=" Modelo Fragata Libertad"
+                            class="card-img card-img-2">
+                        <div class="actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <a href="/pages/product-detail.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <!-- Titulo
+                    categoria
+                    precio -->
+                        <div class="card-category">Maquetas</div>
+                        <h3 class="card-title">Maquetas para armar</h3>
+                        <div class="card-average">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4)
+                        </div>
+                        <div class="card-price">
+                            <span class="price"><small>$</small>2800</span>
+                            <span class="normal-price"><small>$</small>4300</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- seleccion de tipo 
+                    cantidad 
+                    agregar al carrito-->
+                        <div>
+                            <div class="card-selection">
+                                <div class="version">
+                                    <label for="version" class="selection-label">Version</label>
+                                    <select name="version" id="Version">
+                                        <option value="E1">Entrega 1</option>
+                                        <option value="E2">Entrega 2</option>
+                                        <option value="E3">Entrega 3</option>
+                                    </select>
+                                </div>
+                                <div class="card-quantity">
+                                    <p class="selection-label">Cantidad</p>
+                                    <div class="quantity-number">
+                                        <button> <i class="fa-solid fa-minus"></i> </button>
+                                        <div>1</div>
+                                        <button> <i class="fa-solid fa-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart">Añadir al carrito <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- imagen/imagenes -->
+                        <img src="./assets/imagenes/fragata-hercules.png" alt="Modelo Fragata Hercules"
+                            class="card-img card-img-1">
+                        <img src="./assets/imagenes/fragata-hercules2.png" alt=" Modelo Fragata Libertad"
+                            class="card-img card-img-2">
+                        <div class="actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <a href="/pages/product-detail.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <!-- Titulo
+                    categoria
+                    precio -->
+                        <div class="card-category">Maquetas</div>
+                        <h3 class="card-title">Maquetas para armar</h3>
+                        <div class="card-average">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4)
+                        </div>
+                        <div class="card-price">
+                            <span class="price"><small>$</small>2800</span>
+                            <span class="normal-price"><small>$</small>4300</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- seleccion de tipo 
+                    cantidad 
+                    agregar al carrito-->
+                        <div>
+                            <div class="card-selection">
+                                <div class="version">
+                                    <label for="version" class="selection-label">Version</label>
+                                    <select name="version" id="Version">
+                                        <option value="E1">Entrega 1</option>
+                                        <option value="E2">Entrega 2</option>
+                                        <option value="E3">Entrega 3</option>
+                                    </select>
+                                </div>
+                                <div class="card-quantity">
+                                    <p class="selection-label">Cantidad</p>
+                                    <div class="quantity-number">
+                                        <button> <i class="fa-solid fa-minus"></i> </button>
+                                        <div>1</div>
+                                        <button> <i class="fa-solid fa-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart">Añadir al carrito <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- imagen/imagenes -->
+                        <img src="./assets/imagenes/fragata-hercules.png" alt="Modelo Fragata Hercules"
+                            class="card-img card-img-1">
+                        <img src="./assets/imagenes/fragata-hercules2.png" alt=" Modelo Fragata Libertad"
+                            class="card-img card-img-2">
+                        <div class="actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <a href="/pages/product-detail.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <!-- Titulo
+                    categoria
+                    precio -->
+                        <div class="card-category">Maquetas</div>
+                        <h3 class="card-title">Maquetas para armar</h3>
+                        <div class="card-average">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4)
+                        </div>
+                        <div class="card-price">
+                            <span class="price"><small>$</small>2800</span>
+                            <span class="normal-price"><small>$</small>4300</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- seleccion de tipo 
+                    cantidad 
+                    agregar al carrito-->
+                        <div>
+                            <div class="card-selection">
+                                <div class="version">
+                                    <label for="version" class="selection-label">Version</label>
+                                    <select name="version" id="Version">
+                                        <option value="E1">Entrega 1</option>
+                                        <option value="E2">Entrega 2</option>
+                                        <option value="E3">Entrega 3</option>
+                                    </select>
+                                </div>
+                                <div class="card-quantity">
+                                    <p class="selection-label">Cantidad</p>
+                                    <div class="quantity-number">
+                                        <button> <i class="fa-solid fa-minus"></i> </button>
+                                        <div>1</div>
+                                        <button> <i class="fa-solid fa-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart">Añadir al carrito <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- imagen/imagenes -->
+                        <img src="./assets/imagenes/fragata-hercules.png" alt="Modelo Fragata Hercules"
+                            class="card-img card-img-1">
+                        <img src="./assets/imagenes/fragata-hercules2.png" alt=" Modelo Fragata Libertad"
+                            class="card-img card-img-2">
+                        <div class="actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <a href="/pages/product-detail.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <!-- Titulo
+                    categoria
+                    precio -->
+                        <div class="card-category">Maquetas</div>
+                        <h3 class="card-title">Maquetas para armar</h3>
+                        <div class="card-average">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4)
+                        </div>
+                        <div class="card-price">
+                            <span class="price"><small>$</small>2800</span>
+                            <span class="normal-price"><small>$</small>4300</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- seleccion de tipo 
+                    cantidad 
+                    agregar al carrito-->
+                        <div>
+                            <div class="card-selection">
+                                <div class="version">
+                                    <label for="version" class="selection-label">Version</label>
+                                    <select name="version" id="Version">
+                                        <option value="E1">Entrega 1</option>
+                                        <option value="E2">Entrega 2</option>
+                                        <option value="E3">Entrega 3</option>
+                                    </select>
+                                </div>
+                                <div class="card-quantity">
+                                    <p class="selection-label">Cantidad</p>
+                                    <div class="quantity-number">
+                                        <button> <i class="fa-solid fa-minus"></i> </button>
+                                        <div>1</div>
+                                        <button> <i class="fa-solid fa-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart">Añadir al carrito <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- imagen/imagenes -->
+                        <img src="./assets/imagenes/fragata-hercules.png" alt="Modelo Fragata Hercules"
+                            class="card-img card-img-1">
+                        <img src="./assets/imagenes/fragata-hercules2.png" alt=" Modelo Fragata Libertad"
+                            class="card-img card-img-2">
+                        <div class="actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <a href="/pages/product-detail.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <!-- Titulo
+                    categoria
+                    precio -->
+                        <div class="card-category">Maquetas</div>
+                        <h3 class="card-title">Maquetas para armar</h3>
+                        <div class="card-average">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4)
+                        </div>
+                        <div class="card-price">
+                            <span class="price"><small>$</small>2800</span>
+                            <span class="normal-price"><small>$</small>4300</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- seleccion de tipo 
+                    cantidad 
+                    agregar al carrito-->
+                        <div>
+                            <div class="card-selection">
+                                <div class="version">
+                                    <label for="version" class="selection-label">Version</label>
+                                    <select name="version" id="Version">
+                                        <option value="E1">Entrega 1</option>
+                                        <option value="E2">Entrega 2</option>
+                                        <option value="E3">Entrega 3</option>
+                                    </select>
+                                </div>
+                                <div class="card-quantity">
+                                    <p class="selection-label">Cantidad</p>
+                                    <div class="quantity-number">
+                                        <button> <i class="fa-solid fa-minus"></i> </button>
+                                        <div>1</div>
+                                        <button> <i class="fa-solid fa-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart">Añadir al carrito <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- imagen/imagenes -->
+                        <img src="./assets/imagenes/fragata-hercules.png" alt="Modelo Fragata Hercules"
+                            class="card-img card-img-1">
+                        <img src="./assets/imagenes/fragata-hercules2.png" alt=" Modelo Fragata Libertad"
+                            class="card-img card-img-2">
+                        <div class="actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <a href="/pages/product-detail.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <!-- Titulo
+                    categoria
+                    precio -->
+                        <div class="card-category">Maquetas</div>
+                        <h3 class="card-title">Maquetas para armar</h3>
+                        <div class="card-average">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4)
+                        </div>
+                        <div class="card-price">
+                            <span class="price"><small>$</small>2800</span>
+                            <span class="normal-price"><small>$</small>4300</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- seleccion de tipo 
+                    cantidad 
+                    agregar al carrito-->
+                        <div>
+                            <div class="card-selection">
+                                <div class="version">
+                                    <label for="version" class="selection-label">Version</label>
+                                    <select name="version" id="Version">
+                                        <option value="E1">Entrega 1</option>
+                                        <option value="E2">Entrega 2</option>
+                                        <option value="E3">Entrega 3</option>
+                                    </select>
+                                </div>
+                                <div class="card-quantity">
+                                    <p class="selection-label">Cantidad</p>
+                                    <div class="quantity-number">
+                                        <button> <i class="fa-solid fa-minus"></i> </button>
+                                        <div>1</div>
+                                        <button> <i class="fa-solid fa-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart">Añadir al carrito <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- imagen/imagenes -->
+                        <img src="./assets/imagenes/fragata-hercules.png" alt="Modelo Fragata Hercules"
+                            class="card-img card-img-1">
+                        <img src="./assets/imagenes/fragata-hercules2.png" alt=" Modelo Fragata Libertad"
+                            class="card-img card-img-2">
+                        <div class="actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <a href="/pages/product-detail.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <!-- Titulo
+                    categoria
+                    precio -->
+                        <div class="card-category">Maquetas</div>
+                        <h3 class="card-title">Maquetas para armar</h3>
+                        <div class="card-average">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4)
+                        </div>
+                        <div class="card-price">
+                            <span class="price"><small>$</small>2800</span>
+                            <span class="normal-price"><small>$</small>4300</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- seleccion de tipo 
+                    cantidad 
+                    agregar al carrito-->
+                        <div>
+                            <div class="card-selection">
+                                <div class="version">
+                                    <label for="version" class="selection-label">Version</label>
+                                    <select name="version" id="Version">
+                                        <option value="E1">Entrega 1</option>
+                                        <option value="E2">Entrega 2</option>
+                                        <option value="E3">Entrega 3</option>
+                                    </select>
+                                </div>
+                                <div class="card-quantity">
+                                    <p class="selection-label">Cantidad</p>
+                                    <div class="quantity-number">
+                                        <button> <i class="fa-solid fa-minus"></i> </button>
+                                        <div>1</div>
+                                        <button> <i class="fa-solid fa-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart">Añadir al carrito <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- imagen/imagenes -->
+                        <img src="./assets/imagenes/fragata-hercules.png" alt="Modelo Fragata Hercules"
+                            class="card-img card-img-1">
+                        <img src="./assets/imagenes/fragata-hercules2.png" alt=" Modelo Fragata Libertad"
+                            class="card-img card-img-2">
+                        <div class="actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <a href="/pages/product-detail.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <!-- Titulo
+                    categoria
+                    precio -->
+                        <div class="card-category">Maquetas</div>
+                        <h3 class="card-title">Maquetas para armar</h3>
+                        <div class="card-average">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4)
+                        </div>
+                        <div class="card-price">
+                            <span class="price"><small>$</small>2800</span>
+                            <span class="normal-price"><small>$</small>4300</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- seleccion de tipo 
+                    cantidad 
+                    agregar al carrito-->
+                        <div>
+                            <div class="card-selection">
+                                <div class="version">
+                                    <label for="version" class="selection-label">Version</label>
+                                    <select name="version" id="Version">
+                                        <option value="E1">Entrega 1</option>
+                                        <option value="E2">Entrega 2</option>
+                                        <option value="E3">Entrega 3</option>
+                                    </select>
+                                </div>
+                                <div class="card-quantity">
+                                    <p class="selection-label">Cantidad</p>
+                                    <div class="quantity-number">
+                                        <button> <i class="fa-solid fa-minus"></i> </button>
+                                        <div>1</div>
+                                        <button> <i class="fa-solid fa-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart">Añadir al carrito <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- imagen/imagenes -->
+                        <img src="./assets/imagenes/fragata-hercules.png" alt="Modelo Fragata Hercules"
+                            class="card-img card-img-1">
+                        <img src="./assets/imagenes/fragata-hercules2.png" alt=" Modelo Fragata Libertad"
+                            class="card-img card-img-2">
+                        <div class="actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <a href="/pages/product-detail.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <!-- Titulo
+                    categoria
+                    precio -->
+                        <div class="card-category">Maquetas</div>
+                        <h3 class="card-title">Maquetas para armar</h3>
+                        <div class="card-average">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4)
+                        </div>
+                        <div class="card-price">
+                            <span class="price"><small>$</small>2800</span>
+                            <span class="normal-price"><small>$</small>4300</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- seleccion de tipo 
+                    cantidad 
+                    agregar al carrito-->
+                        <div>
+                            <div class="card-selection">
+                                <div class="version">
+                                    <label for="version" class="selection-label">Version</label>
+                                    <select name="version" id="Version">
+                                        <option value="E1">Entrega 1</option>
+                                        <option value="E2">Entrega 2</option>
+                                        <option value="E3">Entrega 3</option>
+                                    </select>
+                                </div>
+                                <div class="card-quantity">
+                                    <p class="selection-label">Cantidad</p>
+                                    <div class="quantity-number">
+                                        <button> <i class="fa-solid fa-minus"></i> </button>
+                                        <div>1</div>
+                                        <button> <i class="fa-solid fa-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart">Añadir al carrito <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-wrapper">
+                <div class="card">
+                    <div class="card-header">
+                        <!-- imagen/imagenes -->
+                        <img src="./assets/imagenes/fragata-hercules.png" alt="Modelo Fragata Hercules"
+                            class="card-img card-img-1">
+                        <img src="./assets/imagenes/fragata-hercules2.png" alt=" Modelo Fragata Libertad"
+                            class="card-img card-img-2">
+                        <div class="actions">
+                            <i class="fa-regular fa-heart"></i>
+                            <a href="/pages/product-detail.html"><i class="fa-regular fa-eye"></i></a>
+                        </div>
+                    </div>
+                    <div class="card-main">
+                        <!-- Titulo
+                    categoria
+                    precio -->
+                        <div class="card-category">Maquetas</div>
+                        <h3 class="card-title">Maquetas para armar</h3>
+                        <div class="card-average">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                            (4)
+                        </div>
+                        <div class="card-price">
+                            <span class="price"><small>$</small>2800</span>
+                            <span class="normal-price"><small>$</small>4300</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <!-- seleccion de tipo 
+                    cantidad 
+                    agregar al carrito-->
+                        <div>
+                            <div class="card-selection">
+                                <div class="version">
+                                    <label for="version" class="selection-label">Version</label>
+                                    <select name="version" id="Version">
+                                        <option value="E1">Entrega 1</option>
+                                        <option value="E2">Entrega 2</option>
+                                        <option value="E3">Entrega 3</option>
+                                    </select>
+                                </div>
+                                <div class="card-quantity">
+                                    <p class="selection-label">Cantidad</p>
+                                    <div class="quantity-number">
+                                        <button> <i class="fa-solid fa-minus"></i> </button>
+                                        <div>1</div>
+                                        <button> <i class="fa-solid fa-plus"></i> </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="add-to-cart">Añadir al carrito <i class="fa-solid fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+        <div class="promos">
+            <h2>Nuestras Promos</h2>
+            <div class="lista-promos">
+                <div class="promocion1">
+                    <h3>Promo Ludificante: HobbyMágico ¡Transforma tu Tiempo Libre!</h3>
+                    <p>¡Transforma tu tiempo libre con nuestra variedad de materiales para dioramas! Desde bases hasta
+                        herramientas, ¡todo lo que necesitas para crear escenas en miniatura! ¡Haz realidad tus ideas
+                        con nuestros insumos de calidad!</p>
+                    <p>Productos dentro de esta promoción:
+                    <ul>
+                        <li>Bases y terrenos artificiales para dioramas.</li>
+                        <li>Materiales de modelado (arcilla, yeso, resina, etc.).</li>
+                    </ul>
+
+                    </p>
+                    <button>Ver Promo</button>
+                </div>
+                <div class="promocion2">
+                    <h3>HobbyDescuentos: ¡Donde Cada Compra es una Aventura!</h3>
+                    <p>Embárcate en una aventura de ahorros con HobbyDescuentos. Descubre precios increíbles y tesoros
+                        ocultos en cada compra. ¡No te pierdas esta oportunidad única para dominar el arte de ahorrar!
+                    </p>
+                    <p>
+                        Lleváte 1 Manual Básico de D&D junto con tu Miniatura a eleccion y 4 pinturas sin cargo!
+                    </p>
+                    <button>Ver Promo</button>
+                </div>
+                <div class="promocion3">
+                    <h3>Oferta Pasatiempo: HobbyManía ¡Donde Todos Encuentran su Juego!</h3>
+                    <p>
+                        ¡Explora Oferta Pasatiempo: HobbyManía, donde hallarás todo para empezar en el mundo del
+                        modelismo y las miniaturas! Kits, herramientas y más para tus primeros pasos. ¡Inicia tu viaje
+                        aquí!</p>
+                    <ul>
+                        <li>Kits de construcción de maquetas de edificios históricos.
+                        </li>
+                        <li>Figuras de miniaturas de soldados, animales o personajes de fantasía.
+                        </li>
+                        <li>Modelos de vehículos como aviones, barcos o tanques.
+                        </li>
+                    </ul>
+                    <button>Ver Promo</button>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    <!-- Pie de pagina -->
+    <footer>
+        <section class="footer-section footer-social">
+
+            <a href="https://www.instagram.com" class="footer-social-link" target="_blank">
+                <i class="fa-brands fa-instagram"></i> Instagram </a>
+            <a href="https://www.linkedin.com/" class="footer-social-link" target="_blank">
+                <i class="fa-brands fa-linkedin"></i> Linkedin </a>
+
+        </section>
+        <section class="footer-section footer-brand">
+            <h3>CapitándeHobbies</h3>
+            <img src="/assets/imagenes/barco-logo.png" alt="Logo" class="logo-footer">
+        </section>
+        <section class="footer-section footer-contact">
+            <p>Av Rivadavia 123, Buenos Aires</p>
+            <p>1234-6412</p>
+        </section>
+    </footer>
+    <div class="user-float">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
